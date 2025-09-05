@@ -1,0 +1,9 @@
+[package]
+name = "interface"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+egui = "0.32.0"
+eframe = "0.32.0"
