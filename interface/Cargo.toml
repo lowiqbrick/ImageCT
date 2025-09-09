@@ -7,4 +7,3 @@ publish = false
 [dependencies]
 egui = "0.32.0"
 eframe = "0.32.0"
-processing_app = { path = "../processing_app" }

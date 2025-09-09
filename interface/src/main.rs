@@ -1,4 +1,6 @@
-use processing_app::app::ImageProcessor;
+mod app;
+
+use app::ImageProcessor;
 
 fn main() {
     let native_options = eframe::NativeOptions::default();
