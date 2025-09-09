@@ -7,3 +7,4 @@ publish = false
 [dependencies]
 egui = "0.32.0"
 eframe = "0.32.0"
+image = "0.25.8"
