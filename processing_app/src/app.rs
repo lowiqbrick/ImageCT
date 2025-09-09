@@ -22,10 +22,10 @@ impl App for ImageProcessor {
             .exact_width(working_width / 2.0)
             .show_separator_line(false)
             .show(ctx, |ui| {
-                ui.horizontal(|ui| {
-                    ui.label("TODO\nadd options");
-                });
+                ui.label("enter filepath:");
+                ui.vertical(|ui| ui.text_edit_singleline(&mut self._image_path));
             });
+
         SidePanel::right("right panel")
             .exact_width(working_width / 2.0)
             .show_separator_line(false)
