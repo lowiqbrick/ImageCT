@@ -1,5 +1,5 @@
 use eframe::{App, CreationContext, Frame};
-use egui::{CentralPanel, ColorImage, Context, TextureOptions, Ui};
+use egui::{CentralPanel, ColorImage, Context, Image, TextureOptions, Ui};
 use image::{DynamicImage, ImageReader};
 
 pub struct ImageProcessor {
@@ -39,7 +39,7 @@ impl ImageProcessor {
             let size = [rgba_image.width() as _, rgba_image.height() as _];
             let color_image = ColorImage::from_rgba_unmultiplied(size, &rgba_image);
             let texture_handle = ctx.load_texture("image", color_image, TextureOptions::LINEAR);
-            ui.image(&texture_handle);
+            ui.add(Image::new(&texture_handle).fit_to_fraction(egui::vec2(1.0, 1.0)));
         }
     }
 }
