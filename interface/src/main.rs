@@ -1,4 +1,5 @@
 mod app;
+mod geometry;
 
 use app::ImageProcessor;
 
