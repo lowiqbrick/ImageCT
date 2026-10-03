@@ -32,7 +32,9 @@ impl App for ImageProcessor {
                     }
                 },
                 Err(error) => {
-                    ui.label(format!("image path leads nowhere; {error}"));
+                    if !self.image_path.is_empty() {
+                        ui.label(format!("image path leads nowhere; {error}"));
+                    }
                     None
                 }
             };
